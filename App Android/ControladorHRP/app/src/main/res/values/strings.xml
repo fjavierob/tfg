@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Controlador HRP</string>
+
+    <string name="pref_gimnasio_key">pref_gimnasio</string>
+    <string name="pref_gimnasio_default_value">Inserte gimnasio</string>
+
+    <string name="pref_dispositivo_key">pref_dispositivo</string>
+    <string name="pref_dispositivo_default_value">1</string>
+
+    <string name="pref_max_pulso_key">pref_pulso_alto</string>
+    <string name="pref_max_pulso_default_value">135</string>
+
+</resources>

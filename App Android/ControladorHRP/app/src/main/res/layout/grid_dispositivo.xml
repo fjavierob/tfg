@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/grid_green"
+    android:padding="4dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/gridDispositivoAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:1A:7D:DA:71:09"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/gridDispositivoIconoPulso"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/icon_heartrate"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/gridDispositivoPulso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/gridDispositivoIconoPulso"
+            android:text="140"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingLeft="5dp"
+            android:paddingBottom="4dp"
+            android:layout_alignTop="@id/gridDispositivoIconoPulso"/>
+
+        <ImageView
+            android:id="@+id/gridDispositivoIconoEnergia"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/gridDispositivoPulso"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/icon_calories"/>
+
+        <TextView
+            android:id="@+id/gridDispositivoEnergia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1200kcal"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@id/gridDispositivoIconoEnergia"
+            android:layout_alignBottom="@id/gridDispositivoPulso"
+            android:paddingBottom="4dp"
+            android:layout_marginRight="5dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

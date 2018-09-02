@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" 
+	activate="activate" 
+	configuration-policy="require"
+	deactivate="deactivate" 
+	enabled="true" 
+	immediate="true" 
+	modified="updated" 
+	name="fcoortbon.ble.central_hrp.HRPClient">
+   <implementation class="fcoortbon.ble.central_hrp.HRPClient"/>
+   <service>
+		<provide interface="org.eclipse.kura.configuration.ConfigurableComponent"/>
+   </service>
+   <property name="service.pid" value="fcoortbon.ble.central_hrp.HRPClient"/>
+   <reference bind="setBluetoothService" 
+		cardinality="1..1" 
+		interface="org.eclipse.kura.bluetooth.BluetoothService" 
+		name="BluetoothService" 
+		policy="static" 
+		unbind="unsetBluetoothService"/>
+
+	<reference bind="setDataService" 
+		cardinality="1..1" 
+		interface="org.eclipse.kura.data.DataService" 
+		name="DataService" 
+		policy="static" 
+		unbind="unsetDataService"/>
+		
+</scr:component>

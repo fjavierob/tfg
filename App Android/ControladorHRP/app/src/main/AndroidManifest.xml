@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fcoortbon.ble.central_hrp.controladorhrp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Intermediario"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_app"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="fcoortbon.ble.central_hrp.controladorhrp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fcoortbon.ble.central_hrp.controladorhrp.OpcionesActivity"
+            android:label="Opciones" />
+        <service
+            android:name="fcoortbon.ble.central_hrp.controladorhrp.ServicioSesion"/>
+    </application>
+
+</manifest>

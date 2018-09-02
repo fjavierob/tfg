@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="HRPClient a controlar">
+        <EditTextPreference
+            android:key="@string/pref_gimnasio_key"
+            android:persistent="true"
+            android:title="Código del gimnasio"
+            android:defaultValue="@string/pref_gimnasio_default_value"/>
+        <EditTextPreference
+            android:key="@string/pref_dispositivo_key"
+            android:persistent="true"
+            android:title="Número de dispositivo"
+            android:inputType="number"
+            android:defaultValue="@string/pref_dispositivo_default_value"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Parámetros configurables">
+        <EditTextPreference
+            android:key="@string/pref_max_pulso_key"
+            android:persistent="true"
+            android:title="Pulso alto"
+            android:inputType="number"
+            android:defaultValue="@string/pref_max_pulso_default_value"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

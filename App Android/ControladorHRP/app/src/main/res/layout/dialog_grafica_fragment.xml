@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/graphTitle"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textAllCaps="true"
+        android:fontFamily="monospace"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/graphRelleno1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/graphTitle"/>
+
+    <TextView
+        android:id="@+id/graphRelleno2"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_below="@id/graphRelleno1"/>
+
+    <ImageView
+        android:id="@+id/graphIconoPulso"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@id/graphRelleno2"
+        android:background="@drawable/icon_heartrate"/>
+
+    <TextView
+        android:id="@+id/graphPulso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/graphIconoPulso"
+        android:text="140"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="5dp"
+        android:paddingBottom="4dp"
+        android:layout_alignTop="@id/graphIconoPulso"/>
+
+    <ImageView
+        android:id="@+id/graphIconoEnergia"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/graphRelleno1"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/graphPulso"
+        android:background="@drawable/icon_calories"/>
+
+    <TextView
+        android:id="@+id/graphEnergia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="1200kcal"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@id/graphIconoPulso"
+        android:layout_toRightOf="@id/graphIconoEnergia"
+        android:paddingBottom="4dp"/>
+
+
+    <TextView
+        android:id="@+id/graphMaxPulso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/graphTitle"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/graphMaxLiteral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max:  "
+        android:layout_toLeftOf="@id/graphMaxPulso"
+        android:layout_alignBottom="@id/graphMaxPulso"/>
+
+    <TextView
+        android:id="@+id/graphMinPulso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_alignRight="@id/graphMaxPulso"
+        android:layout_below="@id/graphMaxPulso"/>
+
+    <TextView
+        android:id="@+id/graphMinLiteral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min:  "
+        android:layout_toLeftOf="@id/graphMinPulso"
+        android:layout_alignBottom="@id/graphMinPulso"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:id="@+id/graph"
+        android:layout_below="@id/graphPulso"
+        android:layout_marginTop="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

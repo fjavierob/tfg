@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="es_es">
+    <OCD id="fcoortbon.ble.central_hrp.HRPClient"
+        name="HRPClient"
+        description="Cliente BLE para el servicio de pulso cardíaco">
+       
+        <AD id="codigoGim"  
+            name="Código del gimnasio"
+            type="String"
+            cardinality="0" 
+            required="true"
+            default="123456789012"
+			description="Código que identifica al gimnasio."/>    
+
+        <AD id="numDisp"
+            name="Número del dispositivo."
+            type="Integer"
+            cardinality="0"
+            required="true"
+            default="1"
+            description="Número del dispositivo. Este número diferencia a dispositivos distintos dentro de un mismo gimnasio."/>
+
+        <AD id="client_enable"
+            name="Empezar/Terminar sesión"
+            type="Boolean"
+            cardinality="0"
+            required="true"
+            default="false"
+            description="Comenzar una nueva sesión de lectura de datos de dispositivos BLE. 
+            Para terminar la sesión, establecer esta propiedad a false."/>
+
+        <AD id="scan_time"
+            name="Tiempo de escaneo"
+            type="Integer"
+            cardinality="0"
+            required="true"
+            default="3"
+            min="2"
+            max="10"
+            description="Duración en segundos de cada escaneo de dispositivos BLE. Durante una sesión
+            se realizan estos escaneos de forma periódica para descubrir sensores de pulso cardíaco."/>
+
+        <AD id="period"
+            name="Periodo"
+            type="Integer"
+            cardinality="0"
+            required="true"
+            default="10"
+            min="10"
+            max="60"
+            description="Tiempo en segundos entre inicios de escaneo. Debe ser mayor o igual que la duración del escaneo."/>
+            
+		<AD id="iname"
+            name="Adaptador bluetooth"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="hci0"
+			description="Nombre de la interfaz del adaptador bluetooth del dispositivo."/>			
+            
+    </OCD>
+
+    <Designate pid="fcoortbon.ble.central_hrp.HRPClient">
+        <Object ocdref="fcoortbon.ble.central_hrp.HRPClient"/>
+    </Designate>
+</MetaData>
+
