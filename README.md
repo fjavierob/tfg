@@ -26,4 +26,4 @@ El sistema puede ser usado por diferentes dispositivos en diferentes gimnasios a
 
 ## Autor
 
-**Francisco Javier  Ortiz Bonilla** - [Pogorelich](https://github.com/pogorelich)
+**Francisco Javier  Ortiz Bonilla** - [fjavierob](https://github.com/fjavierob)
